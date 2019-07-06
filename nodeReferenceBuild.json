@@ -2,7 +2,7 @@
     "kind": "Template",
     "apiVersion": "v1",
     "metadata": {
-        "name": "nodejs-login-pipeline",
+        "name": "nodejs-login-example",
         "annotations": {
             "openshift.io/display-name": "Node.js login example",
             "description": "An example Node.js login page. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/nodejs-ex/blob/master/README.md.\n\nWARNING: Any data stored will be lost upon pod destruction. Only use this template for testing.",
