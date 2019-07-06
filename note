@@ -1,0 +1,12 @@
+http://redhat-jenkins-ocbc-cdct.apps.ocbcnisp.demo9936.rht-labs.xyz/pipeline-model-converter/validate
+
+
+Your API token is
+XVB4AZN_5EmlIzLeCXW5-jsDrnxpZg-Y8zJ4oCmjTVE
+Log in with this token
+oc login --token=XVB4AZN_5EmlIzLeCXW5-jsDrnxpZg-Y8zJ4oCmjTVE --server=https://api.ocbcnisp.demo9936.rht-labs.xyz:6443
+Use this token directly against the API
+curl -H "Authorization: Bearer XVB4AZN_5EmlIzLeCXW5-jsDrnxpZg-Y8zJ4oCmjTVE" "https://api.ocbcnisp.demo9936.rht-labs.xyz:6443/apis/user.openshift.io/v1/users/~"
+
+
+Request another token
