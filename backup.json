@@ -86,10 +86,8 @@
                   },
                   "contextDir": "${CONTEXT_DIR}"
               },
-
-
               "strategy": {
-                  "type": "Docker",
+                  "type": "Source",
                   "sourceStrategy": {
                       "from": {
                           "kind": "ImageStreamTag",
@@ -100,15 +98,10 @@
                           {
                               "name": "NPM_MIRROR",
                               "value": "${NPM_MIRROR}"
-                          },
-                          {
-                            
                           }
                       ]
                   }
               },
-
-
               "output": {
                   "to": {
                       "kind": "ImageStreamTag",
@@ -241,7 +234,7 @@
           "name": "NODEJS_VERSION",
           "displayName": "Version of NodeJS Image",
           "description": "Version of NodeJS image to be used (6, 8, or latest).",
-          "value": "10",
+          "value": "8",
           "required": true
       },
       {

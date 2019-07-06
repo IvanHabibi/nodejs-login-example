@@ -10,3 +10,9 @@ curl -H "Authorization: Bearer XVB4AZN_5EmlIzLeCXW5-jsDrnxpZg-Y8zJ4oCmjTVE" "htt
 
 
 Request another token
+
+
+
+docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
+
+giSMG8eqeZbXDGi8gAQVB8A5
