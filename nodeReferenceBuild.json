@@ -249,7 +249,7 @@
             "displayName": "Git Repository URL",
             "description": "The URL of the repository with your application source code.",
             "required": true,
-            "value": "https://gitlab.com/ivanhabi2/halo_gais.git"
+            "value": "https://github.com/IvanHabibi/nodejs-login-example.git"
         },
         {
             "name": "SOURCE_REPOSITORY_REF",
