@@ -223,6 +223,13 @@
             "value": "nodejs-login-example"
         },
         {
+            "name": "NAMESPACE2",
+            "displayName": "Namespace2",
+            "description": "The OpenShift Namespace where the ImageStream resides.",
+            "required": true,
+            "value": "ocbc-cdct2"
+        },
+        {
             "name": "NAMESPACE",
             "displayName": "Namespace",
             "description": "The OpenShift Namespace where the ImageStream resides.",

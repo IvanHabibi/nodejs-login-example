@@ -7,7 +7,7 @@ spec:
     jenkinsPipelineStrategy:
       jenkinsfile: |-
         // path of the template to use
-        def templatePath = 'https://gist.githubusercontent.com/IvanHabibi/b34d0c83f92e20c95337a9388767b7e6/raw/cc8302134c49ead972aaf1764ea4baae6e5a6f2b/nodeReferenceBuild.json'
+        def templatePath = 'https://gist.githubusercontent.com/IvanHabibi/08340bbc0e8dfd5f239b09e724c694cd/raw/45b63467ee02677481746a2587809d9dacbffea8/nodeReferenceBuild.json'
         // name of the template that will be created
         def templateName = 'nodejs-login-example'
         // NOTE, the "pipeline" directive/closure from the declarative pipeline syntax needs to include, or be nested outside,
@@ -65,11 +65,11 @@ spec:
                         } // script
                     } // steps
                 } // stage
-                stage('build') {
+                stage('build to cluster A') {
                     steps {
                         script {
                             openshift.withCluster() {
-                                openshift.withProject() {
+                                openshift.withProject('ocbc-cdct') {
                                     def builds = openshift.selector("bc", templateName).related('builds')
                                     builds.untilEach(1) {
                                         return (it.object().status.phase == "Complete")
@@ -79,11 +79,11 @@ spec:
                         } // script
                     } // steps
                 } // stage
-                stage('deploy') {
+                stage('deploy to cluster A') {
                     steps {
                         script {
                             openshift.withCluster() {
-                                openshift.withProject() {
+                                openshift.withProject('ocbc-cdct') {
                                     def rm = openshift.selector("dc", templateName).rollout()
                                     openshift.selector("dc", templateName).related('pods').untilEach(1) {
                                         return (it.object().status.phase == "Running")
